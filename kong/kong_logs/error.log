@@ -1,0 +1,206 @@
+2025/11/17 01:52:01 [warn] 1306#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /usr/local/kong/nginx.conf:7
+2025/11/17 01:52:01 [notice] 1306#0: LMDB validation tag does not exist, assuming empty database
+2025/11/17 01:52:01 [notice] 1306#0: LMDB validation tag mismatch, wiping the database
+2025/11/17 01:52:01 [warn] 1317#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /usr/local/kong/nginx.conf:7
+2025/11/17 01:52:01 [error] 1317#0: init_by_lua error: /usr/local/share/lua/5.1/kong/init.lua:695: error loading plugin schemas: on plugin 'ip-blocker': ip-blocker plugin is enabled but not installed;
+no plugin found
+stack traceback:
+	[C]: in function 'assert'
+	/usr/local/share/lua/5.1/kong/init.lua:695: in function 'init'
+	init_by_lua(nginx-kong.conf:42):3: in main chunk
+2025/11/17 01:55:34 [warn] 1306#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /usr/local/kong/nginx.conf:7
+2025/11/17 01:55:34 [notice] 1306#0: LMDB validation tag does not exist, assuming empty database
+2025/11/17 01:55:34 [notice] 1306#0: LMDB validation tag mismatch, wiping the database
+2025/11/17 01:55:34 [warn] 1317#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /usr/local/kong/nginx.conf:7
+2025/11/17 01:55:36 [error] 1317#0: init_by_lua error: /usr/local/share/lua/5.1/kong/init.lua:718: error parsing declarative config file /usr/local/kong/declarative/kong.yml:
+in 'plugins':
+  - in entry 5 of 'plugins':
+    in 'service':
+      in 'id': missing primary key
+  - in entry 6 of 'plugins':
+    in 'service':
+      in 'id': missing primary key
+stack traceback:
+	[C]: in function 'error'
+	/usr/local/share/lua/5.1/kong/init.lua:718: in function 'init'
+	init_by_lua(nginx-kong.conf:42):3: in main chunk
+2025/11/17 01:58:05 [warn] 1309#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /usr/local/kong/nginx.conf:7
+2025/11/17 01:58:05 [warn] 1320#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /usr/local/kong/nginx.conf:7
+2025/11/17 01:58:06 [notice] 1320#0: [lua] init.lua:776: init(): [request-debug] token for request debugging: 1289c6d9-51e7-49b7-a4d8-d3071d500cca
+2025/11/17 01:58:06 [notice] 1320#0: using the "epoll" event method
+2025/11/17 01:58:06 [notice] 1320#0: openresty/1.25.3.1
+2025/11/17 01:58:06 [notice] 1320#0: OS: Linux 6.8.0-87-generic
+2025/11/17 01:58:06 [notice] 1320#0: getrlimit(RLIMIT_NOFILE): 1024:524288
+2025/11/17 01:58:06 [notice] 1320#0: start worker processes
+2025/11/17 01:58:06 [notice] 1320#0: start worker process 1328
+2025/11/17 01:58:06 [notice] 1320#0: start worker process 1329
+2025/11/17 01:58:06 [notice] 1329#0: *2 [lua] init.lua:259: purge(): [DB cache] purging (local) cache, context: init_worker_by_lua*
+2025/11/17 01:58:06 [notice] 1329#0: *2 [lua] init.lua:259: purge(): [DB cache] purging (local) cache, context: init_worker_by_lua*
+2025/11/17 01:58:06 [notice] 1329#0: *2 [kong] init.lua:589 declarative config loaded from /usr/local/kong/declarative/kong.yml, context: init_worker_by_lua*
+2025/11/17 01:58:06 [notice] 1329#0: *2 [kong] handler.lua:9 [ip-blocker] [ip-blocker] plugin initialized, context: init_worker_by_lua*
+2025/11/17 01:58:06 [notice] 1328#0: *1 [kong] handler.lua:9 [ip-blocker] [ip-blocker] plugin initialized, context: init_worker_by_lua*
+2025/11/17 01:58:48 [warn] 1307#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /usr/local/kong/nginx.conf:7
+2025/11/17 01:58:48 [notice] 1307#0: LMDB validation tag does not exist, assuming empty database
+2025/11/17 01:58:48 [notice] 1307#0: LMDB validation tag mismatch, wiping the database
+2025/11/17 01:58:48 [warn] 1318#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /usr/local/kong/nginx.conf:7
+2025/11/17 01:58:49 [notice] 1318#0: [lua] init.lua:776: init(): [request-debug] token for request debugging: 50e893fe-0a91-4130-a054-72054a0268ab
+2025/11/17 01:58:49 [notice] 1318#0: using the "epoll" event method
+2025/11/17 01:58:49 [notice] 1318#0: openresty/1.25.3.1
+2025/11/17 01:58:49 [notice] 1318#0: OS: Linux 6.8.0-87-generic
+2025/11/17 01:58:49 [notice] 1318#0: getrlimit(RLIMIT_NOFILE): 1024:524288
+2025/11/17 01:58:49 [notice] 1318#0: start worker processes
+2025/11/17 01:58:49 [notice] 1318#0: start worker process 1326
+2025/11/17 01:58:49 [notice] 1318#0: start worker process 1327
+2025/11/17 01:58:49 [notice] 1326#0: *1 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.001 seconds), context: init_worker_by_lua*
+2025/11/17 01:58:49 [notice] 1326#0: *1 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.002 seconds), context: init_worker_by_lua*
+2025/11/17 01:58:49 [notice] 1326#0: *1 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.004 seconds), context: init_worker_by_lua*
+2025/11/17 01:58:49 [notice] 1326#0: *1 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.008 seconds), context: init_worker_by_lua*
+2025/11/17 01:58:49 [notice] 1326#0: *1 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.016 seconds), context: init_worker_by_lua*
+2025/11/17 01:58:49 [notice] 1327#0: *2 [lua] init.lua:259: purge(): [DB cache] purging (local) cache, context: init_worker_by_lua*
+2025/11/17 01:58:49 [notice] 1327#0: *2 [lua] init.lua:259: purge(): [DB cache] purging (local) cache, context: init_worker_by_lua*
+2025/11/17 01:58:49 [notice] 1327#0: *2 [kong] init.lua:589 declarative config loaded from /usr/local/kong/declarative/kong.yml, context: init_worker_by_lua*
+2025/11/17 01:58:49 [notice] 1327#0: *2 [kong] handler.lua:9 [ip-blocker] [ip-blocker] plugin initialized, context: init_worker_by_lua*
+2025/11/17 01:58:49 [notice] 1326#0: *1 [kong] handler.lua:9 [ip-blocker] [ip-blocker] plugin initialized, context: init_worker_by_lua*
+2025/11/17 02:13:16 [error] 1326#0: *1295 [kong] handler.lua:21 [ip-blocker] Cannot connect to Redis: connection refused, client: 172.20.0.1, server: kong, request: "GET /user/api HTTP/1.1", host: "kong:8000", request_id: "90cc864f8ece655b2d921901fafc6452"
+2025/11/17 02:14:53 [error] 1326#0: *1553 [kong] handler.lua:21 [ip-blocker] Cannot connect to Redis: connection refused, client: 172.20.0.1, server: kong, request: "GET /user/api HTTP/1.1", host: "kong:8000", request_id: "2d558e7d7fa65722debd2728d30c1b40"
+2025/11/17 02:17:17 [warn] 1305#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /usr/local/kong/nginx.conf:7
+2025/11/17 02:17:17 [notice] 1305#0: LMDB validation tag does not exist, assuming empty database
+2025/11/17 02:17:17 [notice] 1305#0: LMDB validation tag mismatch, wiping the database
+2025/11/17 02:17:17 [warn] 1316#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /usr/local/kong/nginx.conf:7
+2025/11/17 02:17:19 [notice] 1316#0: [lua] init.lua:776: init(): [request-debug] token for request debugging: 79a7120f-6f97-4e6f-a5e2-a9e449b1cc4a
+2025/11/17 02:17:19 [notice] 1316#0: using the "epoll" event method
+2025/11/17 02:17:19 [notice] 1316#0: openresty/1.25.3.1
+2025/11/17 02:17:19 [notice] 1316#0: OS: Linux 6.8.0-87-generic
+2025/11/17 02:17:19 [notice] 1316#0: getrlimit(RLIMIT_NOFILE): 1024:524288
+2025/11/17 02:17:19 [notice] 1316#0: start worker processes
+2025/11/17 02:17:19 [notice] 1316#0: start worker process 1324
+2025/11/17 02:17:19 [notice] 1316#0: start worker process 1325
+2025/11/17 02:17:19 [notice] 1325#0: *2 [lua] init.lua:259: purge(): [DB cache] purging (local) cache, context: init_worker_by_lua*
+2025/11/17 02:17:19 [notice] 1325#0: *2 [lua] init.lua:259: purge(): [DB cache] purging (local) cache, context: init_worker_by_lua*
+2025/11/17 02:17:19 [notice] 1325#0: *2 [kong] init.lua:589 declarative config loaded from /usr/local/kong/declarative/kong.yml, context: init_worker_by_lua*
+2025/11/17 02:17:19 [notice] 1325#0: *2 [kong] handler.lua:9 [ip-blocker] [ip-blocker] plugin initialized, context: init_worker_by_lua*
+2025/11/17 02:17:19 [notice] 1324#0: *1 [kong] handler.lua:9 [ip-blocker] [ip-blocker] plugin initialized, context: init_worker_by_lua*
+2025/11/17 02:17:26 [error] 1324#0: *1289 [kong] handler.lua:21 [ip-blocker] Cannot connect to Redis: connection refused, client: 172.19.0.1, server: kong, request: "GET /user/api HTTP/1.1", host: "kong:8000", request_id: "2e3e5750d99a2e2539cd10584be92044"
+2025/11/17 02:30:00 [warn] 1306#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /usr/local/kong/nginx.conf:7
+2025/11/17 02:30:00 [notice] 1306#0: LMDB validation tag does not exist, assuming empty database
+2025/11/17 02:30:00 [notice] 1306#0: LMDB validation tag mismatch, wiping the database
+2025/11/17 02:30:01 [warn] 1317#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /usr/local/kong/nginx.conf:7
+2025/11/17 02:30:02 [notice] 1317#0: [lua] init.lua:776: init(): [request-debug] token for request debugging: cc85f705-59f8-4661-bc22-10ed37516e18
+2025/11/17 02:30:02 [notice] 1317#0: using the "epoll" event method
+2025/11/17 02:30:02 [notice] 1317#0: openresty/1.25.3.1
+2025/11/17 02:30:02 [notice] 1317#0: OS: Linux 6.8.0-87-generic
+2025/11/17 02:30:02 [notice] 1317#0: getrlimit(RLIMIT_NOFILE): 1024:524288
+2025/11/17 02:30:02 [notice] 1317#0: start worker processes
+2025/11/17 02:30:02 [notice] 1317#0: start worker process 1325
+2025/11/17 02:30:02 [notice] 1317#0: start worker process 1326
+2025/11/17 02:30:02 [notice] 1325#0: *1 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.001 seconds), context: init_worker_by_lua*
+2025/11/17 02:30:02 [notice] 1325#0: *1 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.002 seconds), context: init_worker_by_lua*
+2025/11/17 02:30:02 [notice] 1325#0: *1 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.004 seconds), context: init_worker_by_lua*
+2025/11/17 02:30:02 [notice] 1325#0: *1 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.008 seconds), context: init_worker_by_lua*
+2025/11/17 02:30:02 [notice] 1326#0: *2 [lua] init.lua:259: purge(): [DB cache] purging (local) cache, context: init_worker_by_lua*
+2025/11/17 02:30:02 [notice] 1326#0: *2 [lua] init.lua:259: purge(): [DB cache] purging (local) cache, context: init_worker_by_lua*
+2025/11/17 02:30:02 [notice] 1326#0: *2 [kong] init.lua:589 declarative config loaded from /usr/local/kong/declarative/kong.yml, context: init_worker_by_lua*
+2025/11/17 02:30:02 [notice] 1326#0: *2 [kong] handler.lua:9 [ip-blocker] [ip-blocker] plugin initialized, context: init_worker_by_lua*
+2025/11/17 02:30:02 [notice] 1325#0: *1 [kong] handler.lua:9 [ip-blocker] [ip-blocker] plugin initialized, context: init_worker_by_lua*
+2025/11/17 02:31:17 [warn] 1306#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /usr/local/kong/nginx.conf:7
+2025/11/17 02:31:17 [notice] 1306#0: LMDB validation tag does not exist, assuming empty database
+2025/11/17 02:31:17 [notice] 1306#0: LMDB validation tag mismatch, wiping the database
+2025/11/17 02:31:17 [warn] 1317#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /usr/local/kong/nginx.conf:7
+2025/11/17 02:31:19 [notice] 1317#0: [lua] init.lua:776: init(): [request-debug] token for request debugging: 6ff4d4ed-7ca9-41d5-b962-c32628c9e067
+2025/11/17 02:31:19 [notice] 1317#0: using the "epoll" event method
+2025/11/17 02:31:19 [notice] 1317#0: openresty/1.25.3.1
+2025/11/17 02:31:19 [notice] 1317#0: OS: Linux 6.8.0-87-generic
+2025/11/17 02:31:19 [notice] 1317#0: getrlimit(RLIMIT_NOFILE): 1024:524288
+2025/11/17 02:31:19 [notice] 1317#0: start worker processes
+2025/11/17 02:31:19 [notice] 1317#0: start worker process 1325
+2025/11/17 02:31:19 [notice] 1317#0: start worker process 1326
+2025/11/17 02:31:19 [notice] 1325#0: *1 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.001 seconds), context: init_worker_by_lua*
+2025/11/17 02:31:19 [notice] 1325#0: *1 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.002 seconds), context: init_worker_by_lua*
+2025/11/17 02:31:19 [notice] 1325#0: *1 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.004 seconds), context: init_worker_by_lua*
+2025/11/17 02:31:19 [notice] 1325#0: *1 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.008 seconds), context: init_worker_by_lua*
+2025/11/17 02:31:19 [notice] 1326#0: *2 [lua] init.lua:259: purge(): [DB cache] purging (local) cache, context: init_worker_by_lua*
+2025/11/17 02:31:19 [notice] 1326#0: *2 [lua] init.lua:259: purge(): [DB cache] purging (local) cache, context: init_worker_by_lua*
+2025/11/17 02:31:19 [notice] 1326#0: *2 [kong] init.lua:589 declarative config loaded from /usr/local/kong/declarative/kong.yml, context: init_worker_by_lua*
+2025/11/17 02:31:19 [notice] 1325#0: *1 [kong] handler.lua:9 [ip-blocker] [ip-blocker] plugin initialized, context: init_worker_by_lua*
+2025/11/17 02:31:19 [notice] 1326#0: *2 [kong] handler.lua:9 [ip-blocker] [ip-blocker] plugin initialized, context: init_worker_by_lua*
+2025/11/17 02:41:39 [warn] 1306#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /usr/local/kong/nginx.conf:7
+2025/11/17 02:41:39 [notice] 1306#0: LMDB validation tag does not exist, assuming empty database
+2025/11/17 02:41:39 [notice] 1306#0: LMDB validation tag mismatch, wiping the database
+2025/11/17 02:41:39 [warn] 1317#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /usr/local/kong/nginx.conf:7
+2025/11/17 02:41:40 [notice] 1317#0: [lua] init.lua:776: init(): [request-debug] token for request debugging: e377baa7-7069-49ff-a912-c3371bc595af
+2025/11/17 02:41:40 [notice] 1317#0: using the "epoll" event method
+2025/11/17 02:41:40 [notice] 1317#0: openresty/1.25.3.1
+2025/11/17 02:41:40 [notice] 1317#0: OS: Linux 6.8.0-87-generic
+2025/11/17 02:41:40 [notice] 1317#0: getrlimit(RLIMIT_NOFILE): 1024:524288
+2025/11/17 02:41:40 [notice] 1317#0: start worker processes
+2025/11/17 02:41:40 [notice] 1317#0: start worker process 1325
+2025/11/17 02:41:40 [notice] 1317#0: start worker process 1326
+2025/11/17 02:41:40 [notice] 1325#0: *1 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.001 seconds), context: init_worker_by_lua*
+2025/11/17 02:41:40 [notice] 1325#0: *1 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.002 seconds), context: init_worker_by_lua*
+2025/11/17 02:41:40 [notice] 1325#0: *1 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.004 seconds), context: init_worker_by_lua*
+2025/11/17 02:41:40 [notice] 1326#0: *2 [lua] init.lua:259: purge(): [DB cache] purging (local) cache, context: init_worker_by_lua*
+2025/11/17 02:41:40 [notice] 1326#0: *2 [lua] init.lua:259: purge(): [DB cache] purging (local) cache, context: init_worker_by_lua*
+2025/11/17 02:41:40 [notice] 1326#0: *2 [kong] init.lua:589 declarative config loaded from /usr/local/kong/declarative/kong.yml, context: init_worker_by_lua*
+2025/11/17 02:41:40 [notice] 1326#0: *2 [kong] handler.lua:9 [ip-blocker] [ip-blocker] plugin initialized, context: init_worker_by_lua*
+2025/11/17 02:41:40 [notice] 1325#0: *1 [kong] handler.lua:9 [ip-blocker] [ip-blocker] plugin initialized, context: init_worker_by_lua*
+2025/11/17 02:47:39 [warn] 1305#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /usr/local/kong/nginx.conf:7
+2025/11/17 02:47:39 [notice] 1305#0: LMDB validation tag does not exist, assuming empty database
+2025/11/17 02:47:39 [notice] 1305#0: LMDB validation tag mismatch, wiping the database
+2025/11/17 02:47:39 [warn] 1316#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /usr/local/kong/nginx.conf:7
+2025/11/17 02:47:40 [notice] 1316#0: [lua] init.lua:776: init(): [request-debug] token for request debugging: 253a4e84-8d26-4b91-90c9-31decd643fa2
+2025/11/17 02:47:40 [notice] 1316#0: using the "epoll" event method
+2025/11/17 02:47:40 [notice] 1316#0: openresty/1.25.3.1
+2025/11/17 02:47:40 [notice] 1316#0: OS: Linux 6.8.0-87-generic
+2025/11/17 02:47:40 [notice] 1316#0: getrlimit(RLIMIT_NOFILE): 1024:524288
+2025/11/17 02:47:40 [notice] 1316#0: start worker processes
+2025/11/17 02:47:40 [notice] 1316#0: start worker process 1324
+2025/11/17 02:47:40 [notice] 1316#0: start worker process 1325
+2025/11/17 02:47:41 [notice] 1325#0: *2 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.001 seconds), context: init_worker_by_lua*
+2025/11/17 02:47:41 [notice] 1325#0: *2 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.002 seconds), context: init_worker_by_lua*
+2025/11/17 02:47:41 [notice] 1325#0: *2 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.004 seconds), context: init_worker_by_lua*
+2025/11/17 02:47:41 [notice] 1324#0: *1 [lua] init.lua:259: purge(): [DB cache] purging (local) cache, context: init_worker_by_lua*
+2025/11/17 02:47:41 [notice] 1324#0: *1 [lua] init.lua:259: purge(): [DB cache] purging (local) cache, context: init_worker_by_lua*
+2025/11/17 02:47:41 [notice] 1324#0: *1 [kong] init.lua:589 declarative config loaded from /usr/local/kong/declarative/kong.yml, context: init_worker_by_lua*
+2025/11/17 02:47:41 [notice] 1324#0: *1 [kong] handler.lua:9 [ip-blocker] [ip-blocker] plugin initialized, context: init_worker_by_lua*
+2025/11/17 02:47:41 [notice] 1325#0: *2 [kong] handler.lua:9 [ip-blocker] [ip-blocker] plugin initialized, context: init_worker_by_lua*
+2025/11/17 02:49:06 [warn] 1306#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /usr/local/kong/nginx.conf:7
+2025/11/17 02:49:06 [notice] 1306#0: LMDB validation tag does not exist, assuming empty database
+2025/11/17 02:49:06 [notice] 1306#0: LMDB validation tag mismatch, wiping the database
+2025/11/17 02:49:06 [warn] 1317#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /usr/local/kong/nginx.conf:7
+2025/11/17 02:49:07 [notice] 1317#0: [lua] init.lua:776: init(): [request-debug] token for request debugging: 57b73cbf-efeb-4770-b522-23a6a692f223
+2025/11/17 02:49:07 [notice] 1317#0: using the "epoll" event method
+2025/11/17 02:49:07 [notice] 1317#0: openresty/1.25.3.1
+2025/11/17 02:49:07 [notice] 1317#0: OS: Linux 6.8.0-87-generic
+2025/11/17 02:49:07 [notice] 1317#0: getrlimit(RLIMIT_NOFILE): 1024:524288
+2025/11/17 02:49:07 [notice] 1317#0: start worker processes
+2025/11/17 02:49:07 [notice] 1317#0: start worker process 1325
+2025/11/17 02:49:07 [notice] 1317#0: start worker process 1326
+2025/11/17 02:49:07 [notice] 1325#0: *1 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.001 seconds), context: init_worker_by_lua*
+2025/11/17 02:49:07 [notice] 1325#0: *1 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.002 seconds), context: init_worker_by_lua*
+2025/11/17 02:49:07 [notice] 1325#0: *1 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.004 seconds), context: init_worker_by_lua*
+2025/11/17 02:49:07 [notice] 1325#0: *1 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.008 seconds), context: init_worker_by_lua*
+2025/11/17 02:49:07 [notice] 1326#0: *2 [lua] init.lua:259: purge(): [DB cache] purging (local) cache, context: init_worker_by_lua*
+2025/11/17 02:49:07 [notice] 1326#0: *2 [lua] init.lua:259: purge(): [DB cache] purging (local) cache, context: init_worker_by_lua*
+2025/11/17 02:49:07 [notice] 1326#0: *2 [kong] init.lua:589 declarative config loaded from /usr/local/kong/declarative/kong.yml, context: init_worker_by_lua*
+2025/11/17 02:49:07 [notice] 1326#0: *2 [kong] handler.lua:9 [ip-blocker] [ip-blocker] plugin initialized, context: init_worker_by_lua*
+2025/11/17 02:49:07 [notice] 1325#0: *1 [kong] handler.lua:9 [ip-blocker] [ip-blocker] plugin initialized, context: init_worker_by_lua*
+2025/11/17 02:54:32 [warn] 1306#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /usr/local/kong/nginx.conf:7
+2025/11/17 02:54:32 [notice] 1306#0: LMDB validation tag does not exist, assuming empty database
+2025/11/17 02:54:32 [notice] 1306#0: LMDB validation tag mismatch, wiping the database
+2025/11/17 02:54:32 [warn] 1317#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /usr/local/kong/nginx.conf:7
+2025/11/17 02:54:33 [notice] 1317#0: [lua] init.lua:776: init(): [request-debug] token for request debugging: 71c72435-feb4-436f-899e-bf905d26720b
+2025/11/17 02:54:33 [notice] 1317#0: using the "epoll" event method
+2025/11/17 02:54:33 [notice] 1317#0: openresty/1.25.3.1
+2025/11/17 02:54:33 [notice] 1317#0: OS: Linux 6.8.0-87-generic
+2025/11/17 02:54:33 [notice] 1317#0: getrlimit(RLIMIT_NOFILE): 1024:524288
+2025/11/17 02:54:33 [notice] 1317#0: start worker processes
+2025/11/17 02:54:33 [notice] 1317#0: start worker process 1325
+2025/11/17 02:54:33 [notice] 1317#0: start worker process 1326
+2025/11/17 02:54:33 [notice] 1326#0: *2 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.001 seconds), context: init_worker_by_lua*
+2025/11/17 02:54:33 [notice] 1326#0: *2 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.002 seconds), context: init_worker_by_lua*
+2025/11/17 02:54:33 [notice] 1326#0: *2 [lua] globalpatches.lua:75: sleep(): executing a blocking 'sleep' (0.004 seconds), context: init_worker_by_lua*
+2025/11/17 02:54:33 [notice] 1325#0: *1 [lua] init.lua:259: purge(): [DB cache] purging (local) cache, context: init_worker_by_lua*
+2025/11/17 02:54:33 [notice] 1325#0: *1 [lua] init.lua:259: purge(): [DB cache] purging (local) cache, context: init_worker_by_lua*
+2025/11/17 02:54:33 [notice] 1325#0: *1 [kong] init.lua:589 declarative config loaded from /usr/local/kong/declarative/kong.yml, context: init_worker_by_lua*
+2025/11/17 02:54:33 [notice] 1325#0: *1 [kong] handler.lua:9 [ip-blocker] [ip-blocker] plugin initialized, context: init_worker_by_lua*
+2025/11/17 02:54:33 [notice] 1326#0: *2 [kong] handler.lua:9 [ip-blocker] [ip-blocker] plugin initialized, context: init_worker_by_lua*

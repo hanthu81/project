@@ -1,0 +1,46 @@
+version: "3.9"
+
+services:
+  redis:
+    image: redis:7
+    container_name: kong-redis
+    ports:
+      - "6379:6379"
+    command: ["redis-server", "--appendonly", "yes"]
+    
+  kong:
+    image: kong:3.6
+    container_name: kong
+    environment:
+      KONG_DATABASE: "off"
+      KONG_DECLARATIVE_CONFIG: /usr/local/kong/declarative/kong.yml
+      KONG_PLUGINS: bundled,opa-abac,file-log,ip-blocker
+    command: ["kong", "start", "--conf", "/etc/kong/kong.conf"]
+    volumes:
+      - ./kong.conf:/etc/kong/kong.conf:ro
+      - ./kong.yml:/usr/local/kong/declarative/kong.yml
+      - ./plugins/opa-abac:/usr/local/share/lua/5.1/kong/plugins/opa-abac
+      - ./plugins/ip-blocker:/usr/local/share/lua/5.1/kong/plugins/ip-blocker
+      - ./certs:/usr/local/kong/certs
+      - ./kong_logs:/usr/local/kong/logs:delegated
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+    depends_on:
+      - opa
+    networks:
+      - kong-net
+  opa:
+    image: openpolicyagent/opa:latest
+    container_name: opa
+    command: ["run", "--server", "--addr=0.0.0.0:8181", "/policies"]
+    volumes:
+      - ./opa:/policies
+    ports:
+     - "8181:8181"
+    networks:
+      - kong-net
+
+networks:
+  kong-net:
+    driver: bridge
