@@ -1,0 +1,9 @@
+2025-11-17 09:01:41,061 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:3000
+ * Running on https://192.168.174.130:3000
+2025-11-17 09:01:41,062 [33mPress CTRL+C to quit[0m
+2025-11-17 09:01:41,063  * Restarting with stat
+2025-11-17 09:01:41,307  * Debugger is active!
+2025-11-17 09:01:41,457  * Debugger PIN: 239-403-657
+2025-11-17 09:54:45,718 172.19.0.3 - - [17/Nov/2025 09:54:45] "GET /user/profile HTTP/1.1" 200 -
