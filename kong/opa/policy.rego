@@ -8,6 +8,7 @@ default allow = false
 allow if {
     check_role(input.jwt.realm_access.roles, input.request.path, input.request.method)
     check_time(input.jwt.realm_access.roles)
+    data.face_state.face_verified == true
 }
 
 # =========

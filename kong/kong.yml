@@ -53,7 +53,7 @@ certificates:
 
 services:
   - name: user-api
-    url: https://192.168.174.130:3000/user/profile
+    url: https://192.168.174.129:3000/user/profile
     client_certificate:
       id: 018f8c09-ad54-4708-838b-336261ab8c33
     routes:
@@ -63,7 +63,7 @@ services:
         protocols:
           - https
   - name: admin-api
-    url: https://192.168.174.130:3000/admin/stats
+    url: https://192.168.174.129:3000/admin/stats
     client_certificate:
       id: 018f8c09-ad54-4708-838b-336261ab8c33
     routes:
@@ -72,6 +72,14 @@ services:
           - /admin/api
         protocols:
           - https
+  - name: faceid-service
+    url: http://opa:8181/v1/data/face_state
+    routes:
+      - name: faceid-route
+        paths:
+          - /face/update
+        methods:
+          - PATCH
 
 plugins:
   - name: jwt
@@ -131,13 +139,13 @@ plugins:
   - name: ip-blocker
     service: user-api
     config:
-      redis_host: 192.168.174.128
+      redis_host: 192.168.174.129
       redis_port: 6379
       redis_set: blocked_ips
   - name: ip-blocker
     service: admin-api
     config:
-      redis_host: 192.168.174.128
+      redis_host: 192.168.174.129
       redis_port: 6379
       redis_set: blocked_ips
 

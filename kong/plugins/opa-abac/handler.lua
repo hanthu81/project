@@ -71,6 +71,20 @@ function OpaAbacHandler:access(conf)
 
   local client = http.new()
   client:set_timeout(3000) -- 3 giây timeout
+  -- Lấy trạng thái face_verified từ OPA Data
+  local res_face, err = client:request_uri("http://opa:8181/v1/data/face_state", { method = "GET" })
+  if not res_face then
+    return kong.response.exit(500, { message = "OPA face_state not reachable: "..(err or "") })
+  end
+
+  local face_state = cjson.decode(res_face.body).result or {}
+  local last_update = (face_state.last_update_ns or 0) / 1e9
+  local now = ngx.now()
+
+  if not face_state.face_verified or now - last_update > 60 then
+    kong.log.warn("Face verification expired or missing")
+    return kong.response.exit(403, { message = "Face verification expired" })
+  end
 
   local body = cjson.encode(opa_input)
   local res, err = client:request_uri("http://opa:8181/v1/data/kong/abac/allow", {
@@ -94,3 +108,4 @@ function OpaAbacHandler:access(conf)
 end
 
 return OpaAbacHandler
+
