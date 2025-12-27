@@ -53,7 +53,7 @@ certificates:
 
 services:
   - name: user-api
-    url: https://192.168.174.129:3000/user/profile
+    url: https://10.10.10.20:3000/user/profile
     client_certificate:
       id: 018f8c09-ad54-4708-838b-336261ab8c33
     routes:
@@ -63,7 +63,7 @@ services:
         protocols:
           - https
   - name: admin-api
-    url: https://192.168.174.129:3000/admin/stats
+    url: https://10.10.10.20:3000/admin/stats
     client_certificate:
       id: 018f8c09-ad54-4708-838b-336261ab8c33
     routes:
@@ -111,7 +111,7 @@ plugins:
   - name: rate-limiting
     service: user-api
     config:
-      minute: 60      # 60 requests per minute
+      minute: 30      # 60 requests per minute
       hour: 1000      # 1000 requests per hour
       day: 10000      # 10000 requests per day
       policy: local
@@ -139,13 +139,13 @@ plugins:
   - name: ip-blocker
     service: user-api
     config:
-      redis_host: 192.168.174.129
+      redis_host: 10.10.10.20
       redis_port: 6379
       redis_set: blocked_ips
   - name: ip-blocker
     service: admin-api
     config:
-      redis_host: 192.168.174.129
+      redis_host: 10.10.10.20
       redis_port: 6379
       redis_set: blocked_ips
 

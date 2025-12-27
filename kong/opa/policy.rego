@@ -37,8 +37,8 @@ check_time(role) if {
     "admin" in role
     clock := time.clock(time.now_ns())
     hour := clock[0]
-    hour >= 0
-    hour < 17
+    hour >= 1
+    hour < 13
 }
 
 check_time(role) if {
@@ -46,6 +46,6 @@ check_time(role) if {
     clock := time.clock(time.now_ns())
     hour := clock[0]
     hour >= 1
-    hour < 12
+    hour < 24
 }
 

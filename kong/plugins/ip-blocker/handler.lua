@@ -5,14 +5,11 @@ local IpBlocker = {
   VERSION  = "1.0",
 }
 
-function IpBlocker:init_worker()
-  kong.log.notice("[ip-blocker] plugin initialized")
-end
-
 function IpBlocker:access(conf)
-  local client_ip = kong.client.get_ip()
+  local client_ip =
+    kong.request.get_header("X-Forwarded-For")
+    or kong.client.get_ip()
 
-  -- Kết nối Redis
   local red = redis:new()
   red:set_timeout(100)
 
@@ -22,21 +19,21 @@ function IpBlocker:access(conf)
     return
   end
 
-  -- Kiểm tra IP trong Redis set
-  local exists, err = red:sismember(conf.redis_set, client_ip)
+  local key = "blocked_ip:" .. client_ip
+  local val, err = red:get(key)
+
   if err then
     kong.log.err("Redis error: ", err)
     return
   end
 
-  if exists == 1 then
+  if val and val ~= ngx.null then
     kong.log.warn("BLOCKED IP detected: ", client_ip)
     return kong.response.exit(403, {
       message = "Your IP has been blocked by security policy."
     })
   end
 
-  -- Giải phóng connection về pool
   red:set_keepalive(10000, 100)
 end
 

@@ -36,8 +36,7 @@ services:
     command: ["run", "--server", "--addr=0.0.0.0:8181", "/policies"]
     volumes:
       - ./opa:/policies
-    ports:
-     - "8181:8181"
+    ports: []
     networks:
       - kong-net
 
